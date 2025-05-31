@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifestyle Preferences Survey</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Lifestyle Preferences Survey</h1>
+        
+        <nav class="menu">
+            <a href="index.html" class="active">FILL OUT SURVEY</a>
+            <a href="results.html">VIEW SURVEY RESULTS</a>
+        </nav>
+        
+        <form id="surveyForm">
+            <h2>Personal Details</h2>
+            <div class="form-group">
+                <label for="fullName">Full Names:</label>
+                <input type="text" id="fullName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" required>
+                <span id="ageError" class="error"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="contactNumber">Contact Number:</label>
+                <input type="tel" id="contactNumber" required>
+            </div>
+            
+            <h2>What is your favorite food?</h2>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="food" value="Pizza"> Pizza</label>
+                <label><input type="checkbox" name="food" value="Pasta"> Pasta</label>
+                <label><input type="checkbox" name="food" value="Pap and Wors"> Pap and Wors</label>
+                <label><input type="checkbox" name="food" value="Other"> Other</label>
+            </div>
+            
+            <h2>Please rate your level of agreement (1 = Strongly Agree, 5 = Strongly Disagree)</h2>
+            
+            <table class="rating-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Strongly Agree</th>
+                        <th>Agree</th>
+                        <th>Nuetral</th>
+                        <th>Disagree</th>
+                        <th>Strongly Disagree</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>I like to watch movies</td>
+                        <td><input type="radio" name="movies" value="1" required></td>
+                        <td><input type="radio" name="movies" value="2"></td>
+                        <td><input type="radio" name="movies" value="3"></td>
+                        <td><input type="radio" name="movies" value="4"></td>
+                        <td><input type="radio" name="movies" value="5"></td>
+                    </tr>
+                    <tr>
+                        <td>I like to listen to radio</td>
+                        <td><input type="radio" name="radio" value="1" required></td>
+                        <td><input type="radio" name="radio" value="2"></td>
+                        <td><input type="radio" name="radio" value="3"></td>
+                        <td><input type="radio" name="radio" value="4"></td>
+                        <td><input type="radio" name="radio" value="5"></td>
+                    </tr>
+                    <tr>
+                        <td>I like to eat out</td>
+                        <td><input type="radio" name="eatOut" value="1" required></td>
+                        <td><input type="radio" name="eatOut" value="2"></td>
+                        <td><input type="radio" name="eatOut" value="3"></td>
+                        <td><input type="radio" name="eatOut" value="4"></td>
+                        <td><input type="radio" name="eatOut" value="5"></td>
+                    </tr>
+                    <tr>
+                        <td>I like to watch TV</td>
+                        <td><input type="radio" name="tv" value="1" required></td>
+                        <td><input type="radio" name="tv" value="2"></td>
+                        <td><input type="radio" name="tv" value="3"></td>
+                        <td><input type="radio" name="tv" value="4"></td>
+                        <td><input type="radio" name="tv" value="5"></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <button type="submit" class="submit-btn">SUBMIT</button>
+            <div id="formError" class="error"></div>
+            <div id="successMessage" class="success"></div>
+        </form>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

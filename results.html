@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Results</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Survey Results</h1>
+        
+        <nav class="menu">
+            <a href="index.html">FILL OUT SURVEY</a>
+            <a href="results.html" class="active">VIEW SURVEY RESULTS</a>
+        </nav>
+        
+        <div id="resultsContainer">
+            <div id="noSurveys" class="no-surveys">No Surveys Available</div>
+            
+            <table id="resultsTable" class="results-table">
+                <tr>
+                    <th>Survey Results</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Total number of surveys:</td>
+                    <td id="totalSurveys">0</td>
+                </tr>
+                <tr>
+                    <td>Average Age:</td>
+                    <td id="avgAge">0</td>
+                </tr>
+                <tr>
+                    <td>Oldest person who participated in survey:</td>
+                    <td id="maxAge">0</td>
+                </tr>
+                <tr>
+                    <td>Youngest person who participated in survey:</td>
+                    <td id="minAge">0</td>
+                </tr>
+                <tr>
+                    <td>Percentage of people who like Pizza:</td>
+                    <td id="pizzaPct">0%</td>
+                </tr>
+                <tr>
+                    <td>Percentage of people who like Pasta:</td>
+                    <td id="pastaPct">0%</td>
+                </tr>
+                <tr>
+                    <td>Percentage of people who like Pap and Wors:</td>
+                    <td id="papWorsPct">0%</td>
+                </tr>
+                <tr>
+                    <td>People who like to watch movies:</td>
+                    <td id="moviesAvg">0</td>
+                </tr>
+                <tr>
+                    <td>People who like to listen to radio:</td>
+                    <td id="radioAvg">0</td>
+                </tr>
+                <tr>
+                    <td>People who like to eat out:</td>
+                    <td id="eatOutAvg">0</td>
+                </tr>
+                <tr>
+                    <td>People who like to watch TV:</td>
+                    <td id="tvAvg">0</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="results.js"></script>
+</body>
+</html>
