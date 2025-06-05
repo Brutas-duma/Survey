@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 async function loadSurveyResults() {
     try {
-        // Get all surveys from Firestore
+        // Retrieve all surveys from Firestore collection 
         const querySnapshot = await db.collection('users').get();
         
         if (querySnapshot.empty) {
@@ -22,7 +22,7 @@ async function loadSurveyResults() {
         document.getElementById('noSurveys').classList.add('hidden');
         document.getElementById('resultsTable').classList.remove('hidden');
         
-        // Initialize variables for calculations
+        // Initialization of variables for calculations
         let totalSurveys = 0;
         let ageSum = 0;
         let maxAge = 0;
