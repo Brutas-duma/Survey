@@ -1,14 +1,11 @@
-// Initialize Firebase
+// Initializing Firebase
 const firebaseConfig = {
     apiKey: "AIzaSyA0nKBzWFwRU0SOdeYyVdBs8wdF9uVPN6E",
-    //authDomain: "YOUR_AUTH_DOMAIN",
     projectId: "eventbuddy-43d94",
-    //storageBucket: "YOUR_STORAGE_BUCKET",
-    //messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
     appId: "1:191583404156:android:e4f36aa97d5b8c4ece89f9"
 };
 
-// Initialize Firebase
+// Initializing Firebase
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
@@ -30,12 +27,12 @@ function calculateAge(dob) {
 document.getElementById('surveyForm')?.addEventListener('submit', async function(e) {
     e.preventDefault();
     
-    // Reset error messages
+    // Error messages
     document.getElementById('formError').textContent = '';
     document.getElementById('ageError').textContent = '';
     document.getElementById('successMessage').textContent = '';
     
-    // Get form values
+    // Retrieve form values
     const fullName = document.getElementById('fullName').value.trim();
     const email = document.getElementById('email').value.trim();
     const dob = document.getElementById('dob').value;
